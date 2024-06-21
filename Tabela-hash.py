@@ -55,8 +55,6 @@ class TabelaHash:
         if self.tratamento_colisao == 'encadeamento':
             if nome in self.tabela[indice]:
                 self.tabela[indice].remove(nome)
-            else:
-                print(f"Nome não consta na base")
         else:
             for i in range(self.tamanho):
                 novo_indice = (indice + i) % self.tamanho
